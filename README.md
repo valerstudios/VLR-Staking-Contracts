@@ -11,13 +11,6 @@ When staking, fees totaling 3% are collected according to the following breakdow
 
 When the distributor is ready, revenues from social enterprises will be split up between stakers proportionately.  After rewards distribution, staking times are reset, as opposed to a recurring reward distribution on a consistent basis.  Additionally, the distributor chooses which basket of enterprise tokens will be shared during each period.  
 
-NOTES TO AUDITORS:<br>
-1.)  Currently, mtc purchase from pancake swap is not a part of our testing.  To enable it in the contract:
--  delete lines 156, 210
--  enable line 155, 209
-
-2.) To efficiently complete tests, we have been using a public stakeWithTimeParameters() function.  The final contract will only have a public stake() function.
-
 # EVLR Staking Contract
 
 Enterprise VLR Staking contracts are used by social enterprises within the VLR ecosystem to distribute rewards for stakers.  
