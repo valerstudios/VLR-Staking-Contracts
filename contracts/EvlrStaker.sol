@@ -28,6 +28,8 @@ contract EvlrStaker is ERC20 {
     uint256 private burnFee;
     uint256 private totalCharityCollected;
 
+    event RewardDistribution(uint date, uint totalDistributed);
+
     constructor(
         string memory _tokenName,
         string memory _symbol,
@@ -215,6 +217,7 @@ contract EvlrStaker is ERC20 {
             eVlrContract.transfer(stakes[i].ownerAddress, transferAmount);
         }
         _resetRewardsStakes();
+        emit RewardDistribution(block.timestamp, rewardTokenValue);
     }
 
     function _resetRewardsStakes() private {
